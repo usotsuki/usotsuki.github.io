@@ -38,7 +38,7 @@ request.onload = function () {
 		const card = document.createElement('div');
 		card.setAttribute('class', 'card');
 
-		const errorMessage = document.createElement('h1');
+		const errorMessage = document.createElement('h2');
 		errorMessage.textContent = "Please try again later.";
 
 		container.appendChild(card);
