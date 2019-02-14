@@ -10,9 +10,8 @@ request.onload = function () {
 	var data = JSON.parse(this.response);
 
 	if (request.status >= 200 && request.status < 400) {
-		data.forEach(stat => {
-			console.log(stat.title);
-		});
+		console.log("Status: " + data.status);
+		console.log(data.message);
 	}
 	else {
 		console.log('error');
