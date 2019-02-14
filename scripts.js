@@ -21,27 +21,30 @@ request.onload = function () {
 	var data = JSON.parse(this.response);
 
 	if (request.status >= 200 && request.status < 400) {
-		//console.log("Status: " + data.status);
-		//console.log("Uptime: " + data.time.duration.formated);
-
 		const card = document.createElement('div');
 		card.setAttribute('class', 'card');
 
-		const h1 = document.createElement('h1');
-		h1.textContent = "Status: " + data.status;
+		const header = document.createElement('h1');
+		header.textContent = "Status: " + data.status;
 
-		const p = document.createElement('p');
-		data.time.duration.formated = "Uptime: " + data.time.duration.formated.substring(0, 300);
-		p.textContent = `${data.time.duration.formated}...`;
+		const description = document.createElement('p');
+		description.textContent = "Uptime: " + data.time.duration.formated;
+		//uptime = "Uptime: " + data.time.duration.formated.substring(0, 100);
+		//p.textContent = `${uptime}...`;
 
 		container.appendChild(card);
-		card.appendChild(h1);
-		card.appendChild(p);
+		card.appendChild(header);
+		card.appendChild(description);
 	}
 	else {
-		const errorMessage = document.createElement('marquee');
-		errorMessage.textContent = `Please try again later.`;
-		app.appendChild(errorMessage);
+		const card = document.createElement('div');
+		card.setAttribute('class', 'card');
+
+		const errorMessage = document.createElement('h1');
+		errorMessage.textContent = "Please try again later.";
+
+		container.appendChild(card);
+		card.appendChild(errorMessage);
 	}
 }
 
