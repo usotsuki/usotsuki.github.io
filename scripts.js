@@ -24,7 +24,7 @@ request.onload = function () {
 		const card = document.createElement('div');
 		card.setAttribute('class', 'card');
 
-		const header = document.createElement('h1');
+		const header = document.createElement('h2');
 		header.textContent = "Status: " + data.status;
 
 		const description = document.createElement('p');
