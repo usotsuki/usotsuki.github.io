@@ -24,7 +24,7 @@ request.onload = function () {
 		const card = document.createElement('div');
 		card.setAttribute('class', 'card');
 
-		if (data.status == "UP") {
+		if (data.status == "DOWN") {
 			const header = document.createElement('h1');
 			header.textContent = "Status: " + data.status;
 
