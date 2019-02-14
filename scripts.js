@@ -1,11 +1,14 @@
+// Website root
 const app = document.getElementById('root');
 
+// Fortnite logo
 const logo = document.createElement('img');
 logo.src = 'logo.png';
 
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
+// Append to website
 app.appendChild(logo);
 app.appendChild(container);
 
@@ -16,15 +19,16 @@ var request = new XMLHttpRequest();
 request.open('GET', 'https://fortnite-public-api.theapinetwork.com/prod09/status/fortnite_server_status', true);
 
 request.onload = function () {
-
 	// Begin accessing JSON data here
 	var data = JSON.parse(this.response);
 
-	if (request.status >= 200 && request.status < 400) {
-		const card = document.createElement('div');
-		card.setAttribute('class', 'card');
+	// Create card
+	const card = document.createElement('div');
+	card.setAttribute('class', 'card');
 
-		if (data.status == "DOWN") {
+	if (request.status >= 200 && request.status < 400) {
+		// Check Fortnite server status
+		if (data.status == "UP") {
 			const header = document.createElement('h1');
 			header.textContent = "Status: " + data.status;
 
@@ -37,16 +41,14 @@ request.onload = function () {
 		}
 		else {
 			const header = document.createElement('h2');
-			header.textContent = "Status: Down";
+			header.textContent = "Status: " + data.status;
 
 			container.appendChild(card);
 			card.appendChild(header);
 		}
 	}
+	// If API page doesn't respond, show error
 	else {
-		const card = document.createElement('div');
-		card.setAttribute('class', 'card');
-
 		const errorMessage = document.createElement('h2');
 		errorMessage.textContent = "Please try again later.";
 
