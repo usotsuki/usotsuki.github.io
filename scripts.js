@@ -28,7 +28,7 @@ request.onload = function () {
 
 	if (request.status >= 200 && request.status < 400) {
 		// Check Fortnite server status
-		if (data.status == "UP") {
+		if (data.status == "DOWN") {
 			const header = document.createElement('h1');
 			header.textContent = "Status: " + data.status;
 
