@@ -5,9 +5,18 @@ var request = new XMLHttpRequest();
 request.open('GET', 'https://fortnite-public-api.theapinetwork.com/prod09/status/fortnite_server_status', true);
 
 request.onload = function () {
-  // Begin accessing JSON data here
 
-  }
+	// Begin accessing JSON data here
+	var data = JSON.parse(this.response);
+
+	if (request.status >= 200 && request.status < 400) {
+		data.forEach(stat => {
+			console.log(stat.title);
+		});
+	}
+	else {
+		console.log('error');
+	}
 }
 
 // Send request
