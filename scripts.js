@@ -24,15 +24,24 @@ request.onload = function () {
 		const card = document.createElement('div');
 		card.setAttribute('class', 'card');
 
-		const header = document.createElement('h1');
-		header.textContent = "Status: " + data.status;
+		if (data.status == "UP") {
+			const header = document.createElement('h1');
+			header.textContent = "Status: " + data.status;
 
-		const description = document.createElement('p');
-		description.textContent = "Uptime: " + data.time.duration.formated;
+			const description = document.createElement('p');
+			description.textContent = "Uptime: " + data.time.duration.formated;
 
-		container.appendChild(card);
-		card.appendChild(header);
-		card.appendChild(description);
+			container.appendChild(card);
+			card.appendChild(header);
+			card.appendChild(description);
+		}
+		else {
+			const header = document.createElement('h2');
+			header.textContent = "Status: Down";
+
+			container.appendChild(card);
+			card.appendChild(header);
+		}
 	}
 	else {
 		const card = document.createElement('div');
