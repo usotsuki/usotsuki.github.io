@@ -51,11 +51,20 @@ stats.style.display = 'none';
 // Player Platform
 let platform = "PC";
 
+// Search Field
+const searchBox = document.getElementById('searchText');
+searchBox.style.width="600px";
+searchBox.style.height="35px";
+searchBox.style.fontSize="14pt";
+
 // Search Button
-const searchBtn = document.getElementById('searchBtn');
-searchBtn.onclick = function() {
+const searchButton = document.getElementById('searchButton');
+searchButton.style.width="100px";
+searchButton.style.height="35px";
+searchButton.style.fontSize="14pt";
+searchButton.onclick = function() {
 	// Search Box Input
-	var userInput = document.getElementById('searchText').value;
+	var userInput = searchBox.value;
 	var userName = encodeURIComponent(userInput);
 	// Call API Functions
 	getUID(userName);
@@ -76,7 +85,7 @@ function getUID(userName) {
 			// If UID is UNDEFINED
 			if (typeof userID == 'undefined' || userID == "") {
 				// Show "Enter Player Name" Card
-				sheader.textContent = "Please enter a player name.";
+				sheader.textContent = "Player does not exist.";
 				sdesc.innerHTML = "<b>Not available.</b>";
 				stats.style.display = 'block';
 			}
