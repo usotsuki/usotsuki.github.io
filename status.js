@@ -1,4 +1,3 @@
-// Website root
 const app = document.getElementById('root');
 
 const container = document.createElement('div');
@@ -6,22 +5,23 @@ container.setAttribute('class', 'container');
 
 app.appendChild(container);
 
-// Create a request variable and assign a new XMLHttpRequest object to it.
+/*-------------------------------------------------------------------------------------*/
+
+// Get Server Status from API
 var request = new XMLHttpRequest();
 
-// Open a new connection, using the GET request on the URL endpoint
 request.open('GET', 'https://fortnite-public-api.theapinetwork.com/prod09/status/fortnite_server_status', true);
 
 request.onload = function () {
 	// Begin accessing JSON data here
 	var data = JSON.parse(this.response);
 
-	// Create card
+	// Card
 	const card = document.createElement('div');
-	card.setAttribute('class', 'card');
+	card.setAttribute('class', 'card2');
 
 	if (request.status >= 200 && request.status < 400) {
-		// Check Fortnite server status
+		// Servers UP
 		if (data.status == "UP") {
 			const header = document.createElement('h1');
 			header.textContent = "Status: " + data.status;
@@ -33,6 +33,7 @@ request.onload = function () {
 			card.appendChild(header);
 			card.appendChild(description);
 		}
+		// Servers DOWN
 		else {
 			const header = document.createElement('h2');
 			header.textContent = "Status: " + data.status;
@@ -51,5 +52,4 @@ request.onload = function () {
 	}
 }
 
-// Send request
 request.send();
