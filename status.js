@@ -27,7 +27,7 @@ request.onload = function () {
 			header.textContent = "Status: " + data.status;
 
 			const description = document.createElement('p');
-			description.textContent = "Uptime: " + data.time.duration.formated;
+			description.innerHTML = "<b>Uptime: </b>" + data.time.duration.formated;
 
 			container.appendChild(card);
 			card.appendChild(header);
