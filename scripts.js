@@ -13,5 +13,10 @@ status.setAttribute('class', 'card');
 const header = document.createElement('h3');
 header.textContent = "Status";
 
+// Status function
+status.onclick = function() {
+	location.href = "status.html";
+};
+
 container.appendChild(status);
 status.appendChild(header);
