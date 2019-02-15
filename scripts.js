@@ -123,6 +123,7 @@ function getStats(userID) {
 								  "<b>Winrate: </b>" + data.totals.winrate + "%" + "<br />";
 			}
 			// Show Player Stats
+			tracker.style.display = 'none';
 			stats.style.display = 'block';
 		}
 	}
