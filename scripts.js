@@ -25,7 +25,7 @@ stheader.textContent = "Enter Player Name";
 // Player Stats Card
 const stats = document.getElementById('stats');
 stats.setAttribute('class', 'card2');
-const sheader = document.createElement('h1');
+const sheader = document.createElement('h2');
 sheader.textContent = "Player";
 const sdesc = document.createElement('p');
 sdesc.innerHTML = "<b>Not available.</b>";
