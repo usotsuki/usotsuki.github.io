@@ -66,8 +66,8 @@ p {
 
 input {
 	display: block;
-	margin: 10px auto 10px auto;
-	padding: 3px;
+	margin: 10px auto;
+	max-width: 100%;
 	width: 500px;
 }
 
