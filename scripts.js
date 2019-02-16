@@ -63,6 +63,13 @@ searchButton.onclick = function() {
 	// Call API Functions
 	getUID(userName);
 }
+// Press Enter to Submit
+searchBox.addEventListener("keyup", function(event) {
+	event.preventDefault();
+    if (event.keyCode === 13) {
+        searchButton.click();
+    }
+});
 
 // Get Player UID from API
 function getUID(userName) {
