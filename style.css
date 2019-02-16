@@ -111,6 +111,14 @@ input {
 	}
 }
 
+.footer {
+	position: fixed;     
+	text-align: center;    
+	bottom: 0px; 
+	width: 100%;
+}
+
+/*
 .card:nth-child(2n) h1 {
 	background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
 }
@@ -122,10 +130,4 @@ input {
 .card:nth-child(5n) h1 {
 	background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
-
-.footer {
-	position: fixed;     
-	text-align: center;    
-	bottom: 0px; 
-	width: 100%;
-}
+*/

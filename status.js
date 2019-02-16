@@ -9,14 +9,13 @@ app.appendChild(container);
 
 // Get Server Status from API
 var request = new XMLHttpRequest();
-
 request.open('GET', 'https://fortnite-public-api.theapinetwork.com/prod09/status/fortnite_server_status', true);
 
 request.onload = function () {
 	// Begin accessing JSON data here
 	var data = JSON.parse(this.response);
 
-	// Card
+	// Card for Server Status
 	const card = document.createElement('div');
 	card.setAttribute('class', 'card2');
 

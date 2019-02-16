@@ -49,7 +49,8 @@ stats.style.display = 'none';
 /*-------------------------------------------------------------------------------------*/
 
 // Player Platform
-let platform = "PC";
+let platform = "pc";
+//var option = document.getElementById("platform");
 
 // Search Field
 const searchBox = document.getElementById('searchText');
@@ -60,6 +61,10 @@ searchButton.onclick = function() {
 	// Search Box Input
 	var userInput = searchBox.value;
 	var userName = encodeURIComponent(userInput);
+
+	// Get Option Value
+	//platform = option.options[option.selectedIndex].value;
+
 	// Call API Functions
 	getUID(userName);
 }
@@ -88,12 +93,13 @@ function getUID(userName) {
 				// Show "Enter Player Name" Card
 				sheader.textContent = "Player does not exist.";
 				sdesc.innerHTML = "<b>Not available.</b>";
+				tracker.style.display = 'none';
 				stats.style.display = 'block';
 			}
 			// UID is VALID
 			else {
 				// Username & Platform on Header
-				sheader.textContent = user + " - " + platform;
+				sheader.textContent = user;
 				// Get Player Stats
 				getStats(userID);
 			}
@@ -118,8 +124,8 @@ function getStats(userID) {
 			}
 			else {
 				sdesc.innerHTML = "<b>Wins: </b>" + data.totals.wins + "<br />" +
-								  "<b>Kills: </b>" + data.totals.kills + "<br />" +
 								  "<b>K/D: </b>" + data.totals.kd + "<br />" +
+								  "<b>Kills: </b>" + data.totals.kills + "<br />" +
 								  "<b>Matches: </b>" + data.totals.matchesplayed + "<br />" +
 								  "<b>Winrate: </b>" + data.totals.winrate + "%" + "<br />";
 			}
