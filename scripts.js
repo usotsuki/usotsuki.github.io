@@ -53,14 +53,9 @@ let platform = "PC";
 
 // Search Field
 const searchBox = document.getElementById('searchText');
-searchBox.style.height="35px";
-searchBox.style.fontSize="14pt";
 
 // Search Button
 const searchButton = document.getElementById('searchButton');
-searchButton.style.width="100px";
-searchButton.style.height="35px";
-searchButton.style.fontSize="14pt";
 searchButton.onclick = function() {
 	// Search Box Input
 	var userInput = searchBox.value;

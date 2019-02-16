@@ -65,10 +65,10 @@ p {
 }
 
 input {
-	display: block;
-	margin: 10px auto;
-	max-width: 100%;
-	width: 500px;
+	display: inline-block;
+	padding: 0.25rem 1rem;
+	margin: 0 0 0 0;
+	font-size: 1.3rem;
 }
 
 .container {
