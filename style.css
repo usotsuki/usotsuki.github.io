@@ -64,6 +64,13 @@ p {
 	margin: 0;
 }
 
+input {
+	display: block;
+	margin: 10px auto 10px auto;
+	padding: 3px;
+	width: 500px;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;

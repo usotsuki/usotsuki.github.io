@@ -53,7 +53,6 @@ let platform = "PC";
 
 // Search Field
 const searchBox = document.getElementById('searchText');
-searchBox.style.width="600px";
 searchBox.style.height="35px";
 searchBox.style.fontSize="14pt";
 
