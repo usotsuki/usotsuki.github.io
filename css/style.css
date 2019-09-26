@@ -1,18 +1,98 @@
-/*------------------
-  Preloader
----------------------*/
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
 
-.loader {
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -13px;
-	margin-left: -13px;
-	border-radius: 60px;
-	animation: loader 0.8s linear infinite;
-	-webkit-animation: loader 0.8s linear infinite;
+@font-face {
+	font-family: "Helvetica 45 Light";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Helvetica 45 Light"), url("../fonts/HelveticaNeue-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Helvetica 65 Medium";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Helvetica 65 Medium"), url("../fonts/HelveticaNeue-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Helvetica Neue Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Helvetica Neue Bold"), url("../fonts/HelveticaNeueBold.woff") format("woff");
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Helvetica 65 Medium", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #081624;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 16px;
+	color: #71767b;
+	line-height: 1.8;
+	font-family: "Helvetica 45 Light", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
 }
 
 /*------------------
