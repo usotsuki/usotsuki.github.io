@@ -1,0 +1,61 @@
+/*------------------
+  Preloader
+---------------------*/
+
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+/*------------------
+  Header section
+---------------------*/
+
+.site-navbar {
+	padding: 15px 70px;
+}
+
+.site-navbar.bg-dark {
+	background-color: #262626 !important;
+}
+
+.site-logo h2 {
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.site-logo h2 span {
+	color: #ff006c;
+}
+
+.site-logo p {
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0.43;
+	font-size: 9px;
+	letter-spacing: 0.29em;
+	margin-bottom: 0;
+}
+
+.site-navbar.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+.site-navbar.navbar-dark .navbar-nav .nav-link:hover {
+	color: #ff006c;
+}
